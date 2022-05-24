@@ -23,7 +23,7 @@ public class IndexController {
     @PostMapping("/users")
     public String users(@RequestParam("userName") String userName) {
         if (userName.isEmpty()) {
-            throw new NullPointerException("Поле с userName не заполнено");
+            throw new IllegalArgumentException("Поле с userName не заполнено");
         }
         if (findUsers.checkUserNameInList(userName)) {
             return "findUser";
