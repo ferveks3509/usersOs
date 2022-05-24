@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск пользователя</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="index_content" style="margin: 10px; width: 500px">
+    <form action="/users" method="post">
+        <div class="mb-3">
+            <label for="user_name" class="form-label">Имя пользователя</label>
+            <input type="text" class="form-control" id="user_name" name="userName" placeholder="User name">
+        </div>
+        <button type="submit" class="btn btn-primary">Проверить</button>
+    </form>
+</div>
+</body>
+</html>
