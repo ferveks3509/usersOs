@@ -25,7 +25,7 @@ public class IndexController {
         if (userName.isEmpty()) {
             throw new IllegalArgumentException("Поле с userName не заполнено");
         }
-        if (findUsers.checkUserNameInList(userName)) {
+        if (findUsers.checkUserName(userName)) {
             return "findUser";
         } else {
             return "notFind";
