@@ -9,9 +9,12 @@ import java.io.InputStreamReader;
 @Service
 public class FindUsers {
 
-    public boolean checkUserNameInList(String name) {
+    public boolean checkUserName(String name) {
+        String userHomeFolder = System.getProperty("user.home");
         String line;
-        try (BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("users.txt")))) {
+        try (BufferedReader in = new BufferedReader(
+                new InputStreamReader(
+                        new FileInputStream(userHomeFolder + "/users.txt")))) {
             while ((line = in.readLine()) != null) {
                if (line.contains(name)) {
                    return true;
